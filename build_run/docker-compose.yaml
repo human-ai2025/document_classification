@@ -1,10 +1,15 @@
+version: '3'
+
 services:
   document-classification:
-    build: .
+    build: ./
+    image: pytorch_doc_ocr_classification:latest
     ports:
       - "8888:8888"
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
     volumes:
-      - C:/Users/Tarini's PC/OneDrive/Desktop/document_classification/notebooks:/home
+      - ../notebooks:/home
     deploy:
       resources:
         reservations:

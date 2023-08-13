@@ -77,6 +77,8 @@ $ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/document_classification
 # Access
 $ cd document_classification
 
+$ docker compose -f build_run\docker-compose.yaml down && docker build -t pytorch_doc_ocr_classification:latest . && docker compose -f build_run\docker-compose.yaml up
+
 # Install dependencies
 $ yarn
 
