@@ -77,7 +77,12 @@ $ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/document_classification
 # Access
 $ cd document_classification
 
-$ docker compose -f build_run\docker-compose.yaml down && docker build -t pytorch_doc_ocr_classification:latest . && docker compose -f build_run\docker-compose.yaml up
+# For devlopment 
+docker compose -f build_run\docker-compose-dev.yaml up
+
+#For Inferencing
+$ cd build_run
+$ docker compose -f docker-compose-deploy.yaml down && docker build -f deploy.Dockerfile -t pytorch_doc_ocr_classification:latest . && docker compose -f docker-compose-deploy.yaml  up
 
 # Install dependencies
 $ yarn
@@ -85,7 +90,7 @@ $ yarn
 # Run the project
 $ yarn start
 
-# The server will initialize in the <http://localhost:3000>
+# The server will initialize in the <>
 ```
 
 ## :memo: License ##

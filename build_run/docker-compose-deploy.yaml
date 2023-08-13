@@ -10,6 +10,7 @@ services:
       - NVIDIA_VISIBLE_DEVICES=all
     volumes:
       - ../notebooks:/home
+      - ../data/images:/home/data
     deploy:
       resources:
         reservations:
