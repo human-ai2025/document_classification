@@ -1,0 +1,14 @@
+services:
+  document-classification:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - C:/Users/Tarini's PC/OneDrive/Desktop/document_classification/notebooks:/home
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
