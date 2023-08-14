@@ -1,0 +1,7 @@
+black
+isort
+flake8
+transformers
+easyocr
+plotly-express
+streamlit==1.15.1

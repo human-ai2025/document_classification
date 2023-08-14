@@ -3,7 +3,7 @@ version: '3'
 services:
   document-classification:
     build: ./
-    image: pytorch_doc_ocr_classification:latest
+    image: pytorch_doc_ocr_classification_jupyter:latest
     ports:
       - "8888:8888"
     environment:
