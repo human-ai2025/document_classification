@@ -82,7 +82,7 @@ def predict_document_image(
 
     predicted_class = output.logits.argmax()
     probabilities = F.softmax(output.logits, dim=1).flatten().tolist()
-    return predicted_class.detach().item(), probabilities, image
+    return predicted_class.detach().item(), probabilities, new_image
 
 
 # experimental singleton is used to load the model once and save it in memory for the whole session  
