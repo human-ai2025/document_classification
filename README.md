@@ -6,7 +6,7 @@
   <!-- <a href="https://document_classification.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">Document_classification</h1>
+<h1 align="center">Document Ocr Classification</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/document_classification?color=56BEB8">
@@ -72,24 +72,30 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/document_classification
+$ git clone https://github.com/human-ai2025/document_ocr_classification
 
 # Access
-$ cd document_classification
+$ cd document_ocr_classification
 
 # For devlopment 
-docker compose -f build_run\docker-compose-dev.yaml up
+docker compose -f build_run\deploy\docker-compose-dev.yaml down && docker build -f dev.Dockerfile -t pytorch_doc_ocr_classification_deploy:latest . && docker compose -f build_run\deploy\docker-compose-dev.yaml up
 
 #For Inferencing
-$ cd build_run
-$ docker compose -f docker-compose-deploy.yaml down && docker build -f deploy.Dockerfile -t pytorch_doc_ocr_classification:latest . && docker compose -f docker-compose-deploy.yaml  up
+$ docker compose -f build_run\deploy\docker-compose-deploy-bash.yaml down && docker build -f deploy.Dockerfile -t pytorch_doc_ocr_classification_deploy:latest . && docker compose -f build_run\deploy\docker-compose-deploy-bash.yaml up
 
-# Install dependencies
-$ yarn
+# NOTES
 
-# Run the project
-$ yarn start
+# For interactive bash include the folllowing lines in docker compose under your service 
+tty: true
+stdin_open: true
+command: sh
 
+# To get the list versions only in pip 
+pip3 list --format=freeze > requirements.txt
+
+# To run stramlit 
+streamlit run app.py --server.port=8501 --server.address=0.0.0.0
+View @ http://localhost:8501/
 # The server will initialize in the <>
 ```
 

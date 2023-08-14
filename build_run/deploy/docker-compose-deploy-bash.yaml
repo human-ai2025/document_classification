@@ -3,9 +3,12 @@ version: '3'
 services:
   document-classification:
     build: ./
-    image: pytorch_doc_ocr_classification_deploy:latest
     ports:
-      - "9090:8080"
+      - "8501:8501"
+    image: pytorch_doc_ocr_classification_deploy:latest
+    tty: true
+    stdin_open: true
+    command: sh
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
     volumes:
