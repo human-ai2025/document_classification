@@ -39,7 +39,7 @@
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
   <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
+  <a href="https://github.com/human-ai2025" target="_blank">Author</a>
 </p>
 
 <br>
@@ -50,19 +50,20 @@ Describe your project
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Document Data Extraction;\
+:heavy_check_mark: Document Classification;\
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Python]()
+- [Docker]()
+- [Pytorch Lightning]()
+- [Hugging Face]()
+- [EasyOCR]()
+- [Streamlit]()
+- [Jupyter]()
 
 ## :white_check_mark: Requirements ##
 
@@ -76,12 +77,17 @@ $ git clone https://github.com/human-ai2025/document_ocr_classification
 
 # Access
 $ cd document_ocr_classification
-
+#
 # For devlopment 
 docker compose -f build_run\deploy\docker-compose-dev.yaml down && docker build -f dev.Dockerfile -t pytorch_doc_ocr_classification_deploy:latest . && docker compose -f build_run\deploy\docker-compose-dev.yaml up
 
+# For testing inferencing in bash mode
+docker compose -f build_run\deploy\docker-compose-deploy-bash.yaml down && docker build -f deploy.Dockerfile -t pytorch_doc_ocr_classification_deploy:latest . && docker compose -f build_run\deploy\docker-compose-deploy-bash.yaml up -d
+docker exec -it deploy-document-classification-1 bash
+
+
 #For Inferencing
-$ docker compose -f build_run\deploy\docker-compose-deploy-bash.yaml down && docker build -f deploy.Dockerfile -t pytorch_doc_ocr_classification_deploy:latest . && docker compose -f build_run\deploy\docker-compose-deploy-bash.yaml up
+$ docker compose -f build_run\deploy\docker-compose-deploy.yaml down && docker build -f deploy.Dockerfile -t pytorch_doc_ocr_classification_deploy:latest . && docker compose -f build_run\deploy\docker-compose-deploy.yaml up
 
 # NOTES
 
@@ -104,7 +110,7 @@ View @ http://localhost:8501/
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
+Made with :heart: by <a href="https://github.com/human-ai2025" target="_blank">human-ai2025</a>
 
 &#xa0;
 

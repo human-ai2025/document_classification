@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  document-classification:
+    build: ./
+    ports:
+      - "8501:8501"
+    image: pytorch_doc_ocr_classification_deploy:latest
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
