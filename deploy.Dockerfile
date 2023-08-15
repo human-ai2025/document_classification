@@ -17,4 +17,4 @@ RUN chmod +x startup.sh
 EXPOSE 8501
 
 # Run the script when the container starts
-CMD ["/startup.sh"]
+ENTRYPOINT ["./startup.sh"]

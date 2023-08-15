@@ -82,11 +82,14 @@ docker compose -f build_run\deploy\docker-compose-deploy-bash.yaml down && docke
 docker exec -it deploy-document-classification-1 bash
 
 
-#For Inferencing
+#For Inferencing (This is the part you need)
 $ docker compose -f build_run\deploy\docker-compose-deploy.yaml down && docker build -f deploy.Dockerfile -t pytorch_doc_ocr_classification_deploy:latest . && docker compose -f build_run\deploy\docker-compose-deploy.yaml up
 
-# NOTES
+# Locally in windows/Mac machine most probably EOL error may come dur to the script file 
+#Change the EOL of startup.sh in build_run/deploy to overcome those issues 
+# Now visit  http://localhost:8501/ in your browser 
 
+# NOTES
 # For interactive bash include the folllowing lines in docker compose under your service 
 tty: true
 stdin_open: true
