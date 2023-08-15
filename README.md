@@ -9,19 +9,15 @@
 <h1 align="center">Document Ocr Classification</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/document_classification?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/human-ai2025/document_ocr_classification?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{YOUR_GITHUB_USERNAME}}/document_classification?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/human-ai2025/document_ocr_classification?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{YOUR_GITHUB_USERNAME}}/document_classification?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/human-ai2025/document_ocr_classification?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/{{YOUR_GITHUB_USERNAME}}/document_classification?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/human-ai2025/document_ocr_classification?color=56BEB8">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/document_classification?color=56BEB8" /> -->
 
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{YOUR_GITHUB_USERNAME}}/document_classification?color=56BEB8" /> -->
-
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{YOUR_GITHUB_USERNAME}}/document_classification?color=56BEB8" /> -->
 </p>
 
 <!-- Status -->
@@ -46,12 +42,12 @@
 
 ## :dart: About ##
 
-Describe your project
+This project is about document data extraction and document classification. 
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Document Data Extraction;\
-:heavy_check_mark: Document Classification;\
+:heavy_check_mark: Document Data Extraction;
+:heavy_check_mark: Document Classification;
 
 ## :rocket: Technologies ##
 
