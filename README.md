@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Document_classification" />
+  <img src="https://github.com/human-ai2025/document_ocr_classification/blob/main/img/bdad83da09760e40dc4c353c627df6678d58209c6479c169270daf2d.jpg" alt="Document_classification" />
 
   &#xa0;
 
